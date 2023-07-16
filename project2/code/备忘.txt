@@ -1,0 +1,16 @@
+pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.11/index.html
+pip install -r requirements.txt
+pip install -v -e .
+
+baseline 28.89
+
+1. baseline 28.89
+2. bs=32
+3. 600k 28.92
+*4. 1000k 28.95
+5. 900k 28.94
+6. 1200k 28.94
+7. 1500k + Charbonnier loss
+8. 1250k + weight_decay + Charbonnier loss
+9. 28.954 1250k + 1e-5~1e-8
+10. 1260k + 5e-6~5e-8 + AdamW + 1e-7 weight_decay
